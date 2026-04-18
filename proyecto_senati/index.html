@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Login | Restaurante SENATI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .login-header p {
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+        }
+
+        .alert {
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .alert-error {
+            background: #fee;
+            color: #c33;
+            border: 1px solid #fcc;
+        }
+
+        .login-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .login-footer small {
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 25px;
+            }
+            
+            .login-header h1 {
+                font-size: 24px;
+            }
+            
+            .btn-login {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>🍜 Restaurante SENATI</h1>
+                <p>Inicia sesión para continuar</p>
+            </div>
+            
+            <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="correo">📧 Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@senati.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contraseña">🔒 Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" required placeholder="••••••">
+                </div>
+                
+                <button type="submit" class="btn-login">Ingresar</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Credenciales de prueba:</p>
+                <small>admin@senati.com / 123456</small>
+                <small>juan@senati.com / 123456</small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Inicializar datos por defecto si no existen
+        function inicializarDatos() {
+            if (!localStorage.getItem('usuarios')) {
+                const usuarios = [
+                    { id: 1, nombre: 'Admin SENATI', correo: 'admin@senati.com', contraseña: '123456', rol: 'administrador', fecha: new Date().toISOString() },
+                    { id: 2, nombre: 'Juan Perez', correo: 'juan@senati.com', contraseña: '123456', rol: 'empleado', fecha: new Date().toISOString() }
+                ];
+                localStorage.setItem('usuarios', JSON.stringify(usuarios));
+                localStorage.setItem('nextUsuarioId', 3);
+            }
+
+            if (!localStorage.getItem('productos')) {
+                const productos = [
+                    { id: 1, nombre: 'Arroz Chaufa', descripcion: 'Arroz frito con pollo, huevo y sillao', precio: 12.00 },
+                    { id: 2, nombre: 'Tallarín Saltado', descripcion: 'Fideos salteados con pollo y verduras', precio: 13.50 },
+                    { id: 3, nombre: 'Pollo Chi Jau Kay', descripcion: 'Pollo frito con salsa dulce y ajonjolí', precio: 16.00 },
+                    { id: 4, nombre: 'Pollo con Piña', descripcion: 'Pollo salteado con trozos de piña', precio: 15.50 },
+                    { id: 5, nombre: 'Kam Lu Wantán', descripcion: 'Pollo, cerdo y wantán con salsa agridulce', precio: 18.00 },
+                    { id: 6, nombre: 'Sopa Wantán', descripcion: 'Caldo con wantanes rellenos de carne', precio: 10.00 },
+                    { id: 7, nombre: 'Aeropuerto', descripcion: 'Combinado de arroz chaufa con tallarines', precio: 14.50 },
+                    { id: 8, nombre: 'Pollo Tipakay', descripcion: 'Pollo frito con salsa agridulce', precio: 16.50 },
+                    { id: 9, nombre: 'Chancho Agridulce', descripcion: 'Cerdo con salsa agridulce', precio: 17.00 },
+                    { id: 10, nombre: 'Enrollado Primavera', descripcion: 'Rollitos fritos rellenos de verduras', precio: 8.50 }
+                ];
+                localStorage.setItem('productos', JSON.stringify(productos));
+                localStorage.setItem('nextProductoId', 11);
+            }
+
+            if (!localStorage.getItem('ventas')) {
+                localStorage.setItem('ventas', JSON.stringify([]));
+                localStorage.setItem('nextVentaId', 1);
+            }
+        }
+
+        // Login
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const correo = document.getElementById('correo').value;
+            const contraseña = document.getElementById('contraseña').value;
+            
+            inicializarDatos();
+            
+            const usuarios = JSON.parse(localStorage.getItem('usuarios'));
+            const usuario = usuarios.find(u => u.correo === correo && u.contraseña === contraseña);
+            
+            if (usuario) {
+                localStorage.setItem('usuarioActual', JSON.stringify(usuario));
+                window.location.href = 'dashboard.html';
+            } else {
+                const errorDiv = document.getElementById('error-message');
+                errorDiv.textContent = '❌ Usuario o contraseña incorrectos';
+                errorDiv.style.display = 'block';
+                
+                setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
