@@ -108,12 +108,12 @@ restaurante-tio-guston/
 
 ## 🗄️ Base de datos (Firebase Firestore)
 
-### Diagramas
+### Diagramas de Entidad
 
-![Diagrama Entidad Relacion]<a href="https://ibb.co/MxwzgbhZ"><img src="https://i.ibb.co/VcnFLdNJ/IMG-RELACION-DE-ENTIDAD.png" alt="IMG-RELACION-DE-ENTIDAD" border="0"></a>
+<a href="https://ibb.co/MxwzgbhZ"><img src="https://i.ibb.co/VcnFLdNJ/IMG-RELACION-DE-ENTIDAD.png" alt="IMG-RELACION-DE-ENTIDAD" border="0"></a>
 
 
-![Diagrama Entidad Relacion]<
+
 <a href="https://ibb.co/ynNkbnXs"><img src="https://i.ibb.co/wNdQxNR6/IMG-TABLA-ENTIDAD.png" alt="IMG-TABLA-ENTIDAD" border="0"></a>
 
 ### Colecciones
