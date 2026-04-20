@@ -1,7 +1,7 @@
 ## TRELLO
 Más info en [mi tablero de trello](https://trello.com/invite/b/69a1f845293c48098087a8c8/ATTI02027801cb453a6d213e1f3af08e56fc1D2E7705/restaurantepolleriamisquizaso)
 
-![TRELLO](https://ibb.co/vCd8p0Bj)
+![TRELLO](<a href="https://ibb.co/vCd8p0Bj"><img src="https://i.ibb.co/KcsHdTGr/imagen-de-trelo.png" alt="imagen-de-trelo" border="0"></a>)
 
 ---
 
