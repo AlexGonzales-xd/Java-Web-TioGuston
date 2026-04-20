@@ -102,7 +102,7 @@ restaurante-tio-guston/
 
 ![FIGMA](AQUI_VA_TU_IMAGEN_DE_FIGMA)
 
-**Link:** [Ver diseño en Figma]([https://www.figma.com/file/tu-link](https://www.figma.com/design/xzqAc98md3yEOfGO4PqP7j/PAGINA-WEB?node-id=0-1&t=if1JuIGiS675F5vi-1))
+**Link:**([https://www.figma.com/file/tu-link](https://www.figma.com/design/xzqAc98md3yEOfGO4PqP7j/PAGINA-WEB?node-id=0-1&t=if1JuIGiS675F5vi-1))
 
 ---
 
