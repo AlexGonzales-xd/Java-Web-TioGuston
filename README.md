@@ -110,7 +110,11 @@ restaurante-tio-guston/
 
 ### Diagramas
 
-![Diagrama Entidad Relacion](AQUI_VA_TU_DIAGRAMA_ER<a href="https://ibb.co/MxwzgbhZ"><img src="https://i.ibb.co/VcnFLdNJ/IMG-RELACION-DE-ENTIDAD.png" alt="IMG-RELACION-DE-ENTIDAD" border="0"></a>U_ARQUITECTURA_FIREBASE)
+![Diagrama Entidad Relacion]<a href="https://ibb.co/MxwzgbhZ"><img src="https://i.ibb.co/VcnFLdNJ/IMG-RELACION-DE-ENTIDAD.png" alt="IMG-RELACION-DE-ENTIDAD" border="0"></a>
+
+
+![Diagrama Entidad Relacion]<
+<a href="https://ibb.co/ynNkbnXs"><img src="https://i.ibb.co/wNdQxNR6/IMG-TABLA-ENTIDAD.png" alt="IMG-TABLA-ENTIDAD" border="0"></a>
 
 ### Colecciones
 
