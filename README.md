@@ -110,9 +110,7 @@ restaurante-tio-guston/
 
 ### Diagramas
 
-![Diagrama Entidad Relacion](AQUI_VA_TU_DIAGRAMA_ER)
-![Modelo Relacional](AQUI_VA_TU_MODELO_RELACIONAL)
-![Arquitectura Firebase](AQUI_VA_TU_ARQUITECTURA_FIREBASE)
+![Diagrama Entidad Relacion](AQUI_VA_TU_DIAGRAMA_ER<a href="https://ibb.co/MxwzgbhZ"><img src="https://i.ibb.co/VcnFLdNJ/IMG-RELACION-DE-ENTIDAD.png" alt="IMG-RELACION-DE-ENTIDAD" border="0"></a>U_ARQUITECTURA_FIREBASE)
 
 ### Colecciones
 
