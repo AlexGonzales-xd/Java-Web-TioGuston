@@ -20,8 +20,6 @@ El sistema cuenta con 4 colecciones principales:
 | **ventas** | Registro de cada venta realizada |
 | **contadores** | Control de IDs automáticos |
 
----
-
 ### Estructura de colecciones
 
 #### 📌 Colección: `usuarios`
@@ -62,8 +60,6 @@ El sistema cuenta con 4 colecciones principales:
 | nextProductoId | Siguiente ID para productos |
 | nextUsuarioId | Siguiente ID para usuarios |
 | nextVentaId | Siguiente ID para ventas |
-
----
 
 ### Ejemplo de documento en `productos`
 
