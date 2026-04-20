@@ -124,31 +124,3 @@ restaurante-tio-guston/
 
 **contadores** (nextProductoId, nextUsuarioId, nextVentaId)
 
-### Ejemplo producto
-
-```json
-{
-  "id": 1,
-  "nombre": "Arroz Chaufa",
-  "categoria": "Chifa",
-  "precio": 12.00
-}
-Relaciones
-USUARIO (1) → (N) VENTA → contiene → (N) PRODUCTO
-const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto",
-  storageBucket: "tu-proyecto.firebasestorage.app",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
-};
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if true;
-    }
-  }
-}
-git clone https://github.com/tu-usuario/restaurante-tio-guston.git
