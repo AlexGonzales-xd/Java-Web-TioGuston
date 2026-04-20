@@ -100,7 +100,7 @@ restaurante-tio-guston/
 
 ## 🎨 Diseño UI/UX (Figma)
 
-![FIGMA](AQUI_VA_TU_IMAGEN_DE_FIGMA)
+![FIGMA]<a href="https://ibb.co/qYYsbKNM"><img src="https://i.ibb.co/9HHTR6b9/imagen-2026-04-20-113445234.png" alt="imagen-2026-04-20-113445234" border="0"></a>
 
 **Link:**([https://www.figma.com/file/tu-link](https://www.figma.com/design/xzqAc98md3yEOfGO4PqP7j/PAGINA-WEB?node-id=0-1&t=if1JuIGiS675F5vi-1))
 
